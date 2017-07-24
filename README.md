@@ -1,1 +1,2 @@
-# Game of Thrones Deathpool
+# Thronesss!
+## The Fantasy Football Version of GOT
