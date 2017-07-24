@@ -1,5 +1,6 @@
 class Character < ApplicationRecord
   belongs_to :team
+  has_many :points
 
   def full_name
     if self.last_name

@@ -1,3 +1,7 @@
+Team.destroy_all
+Character.destroy_all
+Point.destroy_all
+
 teams = {
   "Thomas" =>   [ {first_name: 'Sandor', last_name: 'Clegane', alive: true},
                   {first_name: 'Euron', last_name: 'Greyjoy', alive: true},
