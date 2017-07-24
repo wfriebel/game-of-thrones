@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'team/show'
+
+  get 'team/update'
+
+  get 'rules', to: 'rules#index', as: 'rules'
+
+  get 'welcome/index', as: "home"
+
+  resources :teams, only: [:show, :update]
+
+  root 'welcome#index'
 end

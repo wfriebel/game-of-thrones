@@ -1,0 +1,29 @@
+<section id="welcome-container">
+  <h1>Game of Thrones Death Pool</h1>
+<table>
+  <tr>
+    <th class="team-col">Team</th>
+    <th class="points-col">Week 1</th>
+    <th class="points-col">Week 2</th>
+    <th class="points-col">Week 3</th>
+    <th class="points-col">Week 4</th>
+    <th class="points-col">Week 5</th>
+    <th class="points-col">Week 6</th>
+    <th class="points-col">Week 7</th>
+  </tr>
+  <% @teams.each do |team| %>
+  <tr>
+    <td class="team-col">
+      <a href=<%= team_path(team.id) %>> <%= team.name %> </a>
+    </td>
+    <% (1..7).each do |week| %>
+      <td class="points-col">
+      <%= "#{team.get_points(week)} pts" if team.get_points(week) %>
+    </td>
+    <% end %>
+  <% end %>
+</table>
+</section>
+
+
+

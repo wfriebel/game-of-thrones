@@ -1,0 +1,4 @@
+<h1><%= @team.name %></h1>
+<% @team.characters.each do |character| %>
+  <p><%= character.full_name %></p>
+<% end %>
