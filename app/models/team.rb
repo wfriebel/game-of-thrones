@@ -7,6 +7,10 @@ class Team < ApplicationRecord
     accumulate_points(points)
   end
 
+  def has_points?(week)
+    self.points.where("week = #{week}").count > 0 ? true : false
+  end
+
   def total_points
     points = self.points.all
     accumulate_points(points)
@@ -16,6 +20,6 @@ class Team < ApplicationRecord
     #Takes an Active Record Collection of Points and returns
     #their accumulated value
     def accumulate_points(points)
-      points.map{|point| point.value}.reduce(:+)
+      points.map{|point| point.value}.reduce(0, :+)
     end
 end

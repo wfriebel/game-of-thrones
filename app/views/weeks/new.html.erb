@@ -1,0 +1,9 @@
+<h1><%= @team.name %> Week <%= @week %></h1>
+<table>
+  <th></th>
+  <% @characters.each do |character| %>
+    <th>
+      <%= character.full_name %>
+    </th>
+  <% end %>
+</table>

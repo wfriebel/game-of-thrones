@@ -3,72 +3,14 @@
 <table>
   <tr>
     <th class="rule">Rule</th>
-    <th class="points">Points Per Episode</th>
+    <th class="points">Points</th>
   </tr>
-  <tr>
-    <td class="rule">Character is shown on screen</td>
-    <td class="points">+1 per scene</td>
-  </tr>
-  <tr>
-    <td class="rule">Character or their direwolf kills another drafted character</td>
-    <td class="points">+3</td>
-  </tr>
-  <tr>
-    <td class="rule">Character or their direwolf kills an undrafted character</td>
-    <td class="points">0</td>
-  </tr>
-  <tr>
-    <td class="rule">Character kills a whitewalker</td>
-    <td class="points">+3</td>
-  </tr>
-  <tr>
-    <td class="rule">Character kills a dragon</td>
-    <td class="points">+6</td>
-  </tr>
-  <tr>
-    <td class="rule">Character dies</td>
-    <td class="points">-2</td>
-  </tr>
-  <tr>
-    <td class="rule">Character is resurrected</td>
-    <td class="points">+2</td>
-  </tr>
-  <tr>
-    <td class="rule">Character is resurrected as a whitewalker</td>
-    <td class="points">0</td>
-  </tr>
-  <tr>
-    <td class="rule">Character is shown onscreen as a whitewalker</td>
-    <td class="points">+0.5</td>
-  </tr>
-  <tr>
-    <td class="rule">Character drinks alcohol</td>
-    <td class="points">+1 per scene</td>
-  </tr>
-  <tr>
-    <td class="rule">Character has sex on screen</td>
-    <td class="points">+1</td>
-  </tr>
-  <tr>
-    <td class="rule">Character has sex for the first time in GOT</td>
-    <td class="points">+1</td>
-  </tr>
-  <tr>
-    <td class="rule">Character's direwolf is seen on screen</td>
-    <td class="points">+1</td>
-  </tr>
-  <tr>
-    <td class="rule">Character sits on a throne</td>
-    <td class="points">+1</td>
-  </tr>
-  <tr>
-    <td class="rule">Character has a vision/prophecy</td>
-    <td class="points">+1</td>
-  </tr>
-  <tr>
-    <td class="rule">Savage of the week</td>
-    <td class="points">+3</td>
-  </tr>
+  <% @rules.each do |rule| %>
+    <tr>
+      <td class="rule"> <%= rule.content %> </td>
+      <td class="points"><%= display_points(rule.value) %> per <%= rule.frequency %></td>
+    </tr>
+  <% end %>
 </table>
 <h2>Clarifications</h2>
 <ul>

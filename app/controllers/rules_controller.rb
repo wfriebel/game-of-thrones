@@ -1,4 +1,5 @@
 class RulesController < ApplicationController
-  def index 
+  def index
+    @rules = Rule.all
   end
 end

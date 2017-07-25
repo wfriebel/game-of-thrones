@@ -2,17 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#welcome-container {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  margin-top: 2%;
-}
-
 #table-spacer {
   width: 0.5em;
 }
 
+#welcome-container table td {
+  text-align: center;
+}
+
+#welcome-container table th {
+  text-align: center;
+}
+
 .odd {
   background-color: lightgrey;
+}
+
+#team-col {
+  text-align: left;
 }

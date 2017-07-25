@@ -12,7 +12,10 @@
     <section id="nav">
       <%= link_to "Home", home_path %>
       <%= link_to "Rules", rules_path %>
+      <%= link_to "Characters", characters_path %>
     </section>
-    <%= yield %>
+    <section class="wrapper">
+       <%= yield %>
+    </section>
   </body>
 </html>

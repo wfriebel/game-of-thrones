@@ -2,13 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#rules-container {
-  text-align: center;
-  width: 80%;
-  margin: auto;
-  margin-top: 2%;
-}
-
 .rule {
   width: 75%;
 }
@@ -25,6 +18,10 @@ li {
   text-align: left;
 }
 
-h2 {
-  margin-top: 5%;
+#rules-container table td {
+  text-align: left;
+}
+
+#rules-container table th {
+  text-align: left;
 }

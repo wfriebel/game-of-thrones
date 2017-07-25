@@ -3,13 +3,11 @@
 <table>
   <tr>
     <th class="team-col">Team</th>
-    <th class="points-col">Week 1</th>
-    <th class="points-col">Week 2</th>
-    <th class="points-col">Week 3</th>
-    <th class="points-col">Week 4</th>
-    <th class="points-col">Week 5</th>
-    <th class="points-col">Week 6</th>
-    <th class="points-col">Week 7</th>
+    <% season_length.each do |week| %>
+      <th class="points-col">
+        <%= "Week #{week}" %>
+      </th>
+    <% end %>
     <th id="table-spacer"></th>
     <th class="points-col">Total</th>
   </tr>
@@ -18,9 +16,9 @@
       <td class="team-col">
         <a href=<%= team_path(team.id) %>> <%= team.name %> </a>
       </td>
-      <% (1..7).each do |week| %>
+      <% season_length.each do |week| %>
         <td class="points-col">
-          <%= pluralize(team.get_points(week), "pt", "pts") if team.get_points(week) %>
+          <%= add_week_edit_icon(team, week) %>
         </td>
       <% end %>
       <td></td>

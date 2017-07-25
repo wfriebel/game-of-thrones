@@ -9,4 +9,12 @@ class Character < ApplicationRecord
       self.first_name
     end
   end
+
+  def get_occurance_of(week, type)
+    self.points.where("week = #{week}").where("type = #{type}").count
+  end
+
+  def get_points_of(week, type)
+    self.points.where("week = #{week}").where("type = #{type}").map{|point| point.value}.reduce(0, :+)
+  end
 end
