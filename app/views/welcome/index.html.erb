@@ -10,17 +10,24 @@
     <th class="points-col">Week 5</th>
     <th class="points-col">Week 6</th>
     <th class="points-col">Week 7</th>
+    <th id="table-spacer"></th>
+    <th class="points-col">Total</th>
   </tr>
   <% @teams.each do |team| %>
-  <tr>
-    <td class="team-col">
-      <a href=<%= team_path(team.id) %>> <%= team.name %> </a>
-    </td>
-    <% (1..7).each do |week| %>
-      <td class="points-col">
-      <%= "#{team.get_points(week)} pts" if team.get_points(week) %>
-    </td>
-    <% end %>
+    <tr class="<%= cycle("odd", "even") %>">
+      <td class="team-col">
+        <a href=<%= team_path(team.id) %>> <%= team.name %> </a>
+      </td>
+      <% (1..7).each do |week| %>
+        <td class="points-col">
+          <%= pluralize(team.get_points(week), "pt", "pts") if team.get_points(week) %>
+        </td>
+      <% end %>
+      <td></td>
+      <td>
+        <strong> <%= pluralize(team.total_points, "pt", "pts") %> </strong> 
+      </td>
+    </tr>
   <% end %>
 </table>
 </section>

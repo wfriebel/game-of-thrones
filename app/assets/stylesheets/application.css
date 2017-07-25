@@ -24,7 +24,8 @@ td, th {
 
 table {
   margin: auto;
-  width: 60%;
+  width: 75%;
+  border-collapse: collapse;
 }
 
 #nav {
@@ -44,12 +45,12 @@ table {
   text-align: center;
 }
 
-#main-title {
+h1 {
   margin: 0;
   font-size: xx-large;
 }
 
-#subtitle {
+h2 {
   margin: 0;
   font-size: large;
 }
