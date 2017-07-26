@@ -21,9 +21,9 @@ html {
 
 .wrapper {
   text-align: center;
-  width: 80%;
+  width: 90%;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 table {
@@ -38,7 +38,7 @@ table {
   text-align: right;
   margin-right: 10%;
   margin-top: 3%;
-  margin-bottom: 2%;
+  margin-bottom: 0;
 }
 
 #nav > a {
@@ -53,6 +53,7 @@ table {
 
 h1 {
   margin: 0.5em;
+  margin-top: 0;
   font-size: xx-large;
 }
 

@@ -1,10 +1,10 @@
 <h1><%= @team.name %> Week <%= @week %></h1>
-<table>
+<table class="week-edit-table">
   <tr>
     <th></th>
     <% @characters.each do |character| %>
       <th>
-        <div class="content">
+        <div class="content title">
           <%= character.full_name %>
         </div>
       </th>
