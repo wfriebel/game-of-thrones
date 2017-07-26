@@ -1,0 +1,34 @@
+<% @rules.each do |rule| %>
+  <% if rule.value != 0 %>
+    <tr>
+      <td>
+        <div class="left-col">
+          <%= rule.content %> 
+          (<%=pluralize(rule.points, "pt", "pts") %>)
+        </div>
+      </td>
+      <% @characters.each do |character| %>
+        <td class="<%= cycle("odd", "even") %>">
+          <div class="content">
+            <div class="side-by-side"><%= character.get_points_of(@week, rule) %></div>
+            <div class="side-by-side">
+              <%= form_for @point do |f| %>
+                <%= hidden_field_tag 'point[week]', @week %>
+                <%= hidden_field_tag 'point[team_id]', @team.id %>
+                <%= hidden_field_tag 'point[character_id]', character.id %>
+                <%= hidden_field_tag 'point[rule_id]', rule.id %>
+                <%= button_tag fa_icon("plus") %>
+              <% end %>
+            </div>
+            <div class="side-by-side">
+              <%= form_tag team_week_path(@team.id, @week), method: :delete do |f| %>
+                <%= hidden_field_tag 'rule-id', rule.id %>
+                <%= button_tag fa_icon "minus" %>
+              <% end %>
+            </div>
+          </div>
+        </td>
+      <% end %>
+    </tr>
+  <% end %> 
+<% end %>

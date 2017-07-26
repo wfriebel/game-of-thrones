@@ -1,0 +1,10 @@
+<tr>
+  <th class="team-col">Team</th>
+  <% season_length.each do |week| %>
+    <th class="points-col">
+      <%= "Week #{week}" %>
+    </th>
+  <% end %>
+  <th id="table-spacer"></th>
+  <th class="points-col">Total</th>
+</tr>

@@ -1,32 +1,8 @@
 <section id="welcome-container">
   <%= render "main_title" %>
 <table>
-  <tr>
-    <th class="team-col">Team</th>
-    <% season_length.each do |week| %>
-      <th class="points-col">
-        <%= "Week #{week}" %>
-      </th>
-    <% end %>
-    <th id="table-spacer"></th>
-    <th class="points-col">Total</th>
-  </tr>
-  <% @teams.each do |team| %>
-    <tr class="<%= cycle("odd", "even") %>">
-      <td class="team-col">
-        <a href=<%= team_path(team.id) %>> <%= team.name %> </a>
-      </td>
-      <% season_length.each do |week| %>
-        <td class="points-col">
-          <%= add_week_edit_icon(team, week) %>
-        </td>
-      <% end %>
-      <td></td>
-      <td>
-        <strong> <%= pluralize(team.total_points, "pt", "pts") %> </strong> 
-      </td>
-    </tr>
-  <% end %>
+  <%= render "week_headers"  %>
+  <%= render "scores_table_data" %>
 </table>
 </section>
 

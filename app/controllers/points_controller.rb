@@ -9,10 +9,6 @@ class PointsController < ApplicationController
     redirect_to edit_team_week_path(params[:point][:team_id], params[:point][:week])
   end
 
-  def destroy
-    
-  end
-
   private
     def point_params
       params.require(:point).permit(:value, :week, :team_id, :character_id, :rule_id)

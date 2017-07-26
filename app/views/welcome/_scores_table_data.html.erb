@@ -1,0 +1,18 @@
+<% @teams.each do |team| %>
+  <tr class="<%= cycle("odd", "even") %>">
+    <td>
+      <div class="welcome-table-left-col">
+        <a href=<%= team_path(team.id) %>> <%= team.name %> </a>
+      </div>
+    </td>
+    <% season_length.each do |week| %>
+      <td class="points-col">
+        <%= add_week_edit_icon(team, week) %>
+      </td>
+    <% end %>
+    <td></td>
+    <td>
+      <strong> <%= team.total_points %> </strong> 
+    </td>
+  </tr>
+<% end %>
