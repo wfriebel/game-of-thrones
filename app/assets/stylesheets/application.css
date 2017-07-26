@@ -94,4 +94,8 @@ button:hover {
   color: green;
 }
 
+.red button:hover {
+  color: red;
+}
+
 

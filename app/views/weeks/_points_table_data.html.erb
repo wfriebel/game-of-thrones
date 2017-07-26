@@ -11,7 +11,7 @@
         <td class="<%= cycle("odd", "even") %>">
           <div class="content">
             <div class="side-by-side"><%= character.get_points_of(@week, rule) %></div>
-            <div class="side-by-side">
+            <div class="side-by-side close">
               <%= form_for @point do |f| %>
                 <%= hidden_field_tag 'point[week]', @week %>
                 <%= hidden_field_tag 'point[team_id]', @team.id %>
@@ -20,7 +20,7 @@
                 <%= button_tag fa_icon("plus") %>
               <% end %>
             </div>
-            <div class="side-by-side">
+            <div class="side-by-side close red">
               <%= form_tag team_week_path(@team.id, @week), method: :delete do |f| %>
                 <%= hidden_field_tag 'rule-id', rule.id %>
                 <%= button_tag fa_icon "minus" %>
