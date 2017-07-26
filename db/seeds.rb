@@ -6,7 +6,7 @@ Rule.destroy_all
 teams = {
   "Thomas" =>   [ {first_name: 'Sandor', last_name: 'Clegane', alive: true},
                   {first_name: 'Euron', last_name: 'Greyjoy', alive: true},
-                  {first_name: 'Bronn', last_name: 'of the Black Water', alive: true},
+                  {first_name: 'Bronn', alive: true},
                   {first_name: 'Yara', last_name: 'Greyjoy', alive: true},
                   {first_name: 'Beric', last_name: 'Dondarrion', alive: true},
                   {first_name: 'Obara', last_name: 'Sand', alive: true} ],
