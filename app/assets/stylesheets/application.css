@@ -66,4 +66,30 @@ ul {
   margin-top: 1em;
 }
 
+.odd {
+  background-color: lightgrey;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+button:hover {
+  color: green;
+}
+
 

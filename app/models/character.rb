@@ -14,7 +14,7 @@ class Character < ApplicationRecord
     self.points.where("week = #{week}").where("type = #{type}").count
   end
 
-  def get_points_of(week, type)
-    self.points.where("week = #{week}").where("type = #{type}").map{|point| point.value}.reduce(0, :+)
+  def get_points_of(week, rule)
+    self.points.where("week = #{week}").where("rule_id = #{rule.id}").map{|point| point.value}.reduce(0, :+)
   end
 end

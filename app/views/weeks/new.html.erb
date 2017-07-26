@@ -1,9 +1,30 @@
 <h1><%= @team.name %> Week <%= @week %></h1>
 <table>
-  <th></th>
-  <% @characters.each do |character| %>
-    <th>
-      <%= character.full_name %>
-    </th>
+  <tr>
+    <th></th>
+    <% @characters.each do |character| %>
+      <th>
+        <div class="content">
+          <%= character.full_name %>
+        </div>
+      </th>
+    <% end %>
+  </tr>
+  <% @rules.each do |rule| %>
+    <tr>
+      <td>
+      <div class="left-col">
+        <%= rule.content %>
+      </div>
+    </td>
+    <% @characters.each do |character| %>
+      <td class="<%= cycle("odd", "even") %>">
+        <div class="content">
+          <%= character.get_points_of(@week, rule) %>
+        </div>
+      </td>
+    <% end %>
+    </tr>
   <% end %>
+
 </table>

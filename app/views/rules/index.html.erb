@@ -8,7 +8,7 @@
   <% @rules.each do |rule| %>
     <tr>
       <td class="rule"> <%= rule.content %> </td>
-      <td class="points"><%= display_points(rule.value) %> per <%= rule.frequency %></td>
+      <td class="points"><%= rule.points %> per <%= rule.frequency %></td>
     </tr>
   <% end %>
 </table>

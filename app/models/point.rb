@@ -1,11 +1,10 @@
 class Point < ApplicationRecord
   belongs_to :character
   belongs_to :team
+  belongs_to :rule
 
-  def self.point_type(type)
-
+  def value
+    val = self.rule.points
   end
 
-  private
-    types = ["appearead"]
 end

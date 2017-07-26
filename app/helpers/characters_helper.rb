@@ -6,4 +6,8 @@ module CharactersHelper
       "deceased"
     end
   end
+
+  def get_point_by_week(week, point_id)
+
+  end
 end
